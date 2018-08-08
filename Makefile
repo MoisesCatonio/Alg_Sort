@@ -4,7 +4,7 @@
 PROG = bin/Alg_Sort
 CC = g++
 CPPFLAGS = -O0 -g -W -Wall -pedantic -std=c++11 -Iinclude
-OBJS = main.o Selection.o 
+OBJS = main.o Selection.o Insertion.o
 RM = -f *.o
 
 $(PROG) : $(OBJS)
@@ -16,6 +16,9 @@ main.o :
 
 Selection.o : include/Selection.hpp
 	$(CC) $(CPPFLAGS) -c src/Selection.cpp
+
+Insertion.o : include/Insertion.hpp
+	$(CC) $(CPPFLAGS) -c src/Insertion.cpp
 
 clean:
 	rm -f $(PROG) build/*.o

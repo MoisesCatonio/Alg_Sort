@@ -1,5 +1,7 @@
 #include "Selection.hpp"
 
+#include "Insertion.hpp"
+
 int main(int argc, char * argv[]){
 
     string argument = argv[1];
@@ -28,9 +30,9 @@ int main(int argc, char * argv[]){
         selection(ptr, x);
     }
 
-    // if(argument == "Insertion" || argument == "insertion"){
-    //     selection(ptr, x);
-    // }
+    if(argument == "Insertion" || argument == "insertion"){
+        insertion(ptr, x);
+    }
 
     return 0;
 }
